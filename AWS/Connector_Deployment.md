@@ -2,7 +2,7 @@
 
 **1.) Create a VPC and it’s networking (see “VPC Creation / Deployment Basics” note)**
 
-**2.) Setup a NetApp Cloud Central account
+**2.) Setup a NetApp Cloud Central account**
 
 - Sign up for Cloud Central acct - cloud.netapp.com
 - ‘go to Cloud Manager’
@@ -12,7 +12,7 @@ AWS Marketplace
 
 - Requires subscription to Cloud Manager
 
-3.) AWS environment prep:
+**3.) AWS environment prep:**
 
 IAM policy/roles:
 
@@ -41,7 +41,7 @@ Networking / Firewall Rules
 - SG for CVO in AWS: https://docs.netapp.com/us-en/occm/reference_security_groups.html#inbound-rules
 - SG for Connector in all hyperscalers: https://docs.netapp.com/us-en/occm/reference_networking_cloud_manager.html#connection-to-target-networks
 
-4.) Add Connector: (learn about Connectors: https://docs.netapp.com/us-en/occm/concept_connectors.html)
+**4.) Add Connector: (learn about Connectors: https://docs.netapp.com/us-en/occm/concept_connectors.html)**
 
 NOTE: Disable “Automatic Cloud Volumes ONTAP update during deployment” - this will significantly increase the deployment time (double or more)
 
