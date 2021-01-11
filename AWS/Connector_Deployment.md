@@ -1,8 +1,8 @@
 # Connector Deployment
 
-1.) Create a VPC and it’s networking (see “VPC Creation / Deployment Basics” note)
+**1.) Create a VPC and it’s networking (see “VPC Creation / Deployment Basics” note)**
 
-2.) Setup a NetApp Cloud Central account
+**2.) Setup a NetApp Cloud Central account
 
 - Sign up for Cloud Central acct - cloud.netapp.com
 - ‘go to Cloud Manager’
