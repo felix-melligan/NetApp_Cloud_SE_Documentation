@@ -1,4 +1,4 @@
-# VPC Creation and Deployment Basics
+# VPC Creation / Deployment Basics
 
 **1.) Create VPC**
 
