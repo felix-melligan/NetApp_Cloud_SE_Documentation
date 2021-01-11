@@ -1,6 +1,7 @@
 # Connector Deployment
 
 **1.) Create a VPC and it’s networking (see “VPC Creation / Deployment Basics” note)**
+[Other Page](/AWS/VPC_Creation_Deployment_Basics.md#vpc-creation-deployment-basics)
 
 **2.) Setup a NetApp Cloud Central account**
 
