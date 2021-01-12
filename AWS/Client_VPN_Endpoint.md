@@ -23,12 +23,14 @@ To complete this getting started tutorial, you need the following:
 - The permissions required to work with Client VPN endpoints.
 - A VPC with at least one subnet and an internet gateway. The route table that's associated with your subnet must have a route to the internet gateway.
 
+
 ## **Step 1: Generate server and client certificates and keys** <a name="step-1-generate-server-and-client-certificates-and-keys"></a>
 
 —— Uses EasyRSA to create certificates ——
 
 - This tutorial uses mutual authentication. With mutual authentication, Client VPN uses certificates to perform authentication between the client and the server.
 - For detailed steps to generate the server and client certificates and keys, see Mutual authentication.
+
 
 ## **Step 2: Create a Client VPN endpoint** <a name="step-2-create-a-client-vpn-endpoint"></a>
 
@@ -58,6 +60,7 @@ For more information about the other options that you can specify when creating 
 **NOTE -**
 After you create the Client VPN endpoint, its state is pending-associate. Clients can only establish a VPN connection after you associate at least one target network.
 
+
 ## **Step 3: Enable VPN connectivity for clients** <a name="step-3-enable-vpn-connectivity-for-clients"></a>
 
 To enable clients to establish a VPN session, you must associate a target network with the Client VPN endpoint. A target network is a subnet in a VPC.
@@ -74,21 +77,16 @@ To enable clients to establish a VPN session, you must associate a target networ
 **NOTE -**
 If authorization rules allow it, one subnet association is enough for clients to access a VPC's entire network. You can associate additional subnets to provide high availability in case one of the Availability Zones goes down.
  
-
 When you associate the first subnet with the Client VPN endpoint, the following happens:
 
- 
+- The state of the Client VPN endpoint changes to available. Clients can now establish a VPN connection, but they cannot access any resources in the VPC until you add the authorization rules.
+- The local route of the VPC is automatically added to the Client VPN endpoint route table.
+- The VPC's default security group is automatically applied for the subnet association.
 
-The state of the Client VPN endpoint changes to available. Clients can now establish a VPN connection, but they cannot access any resources in the VPC until you add the authorization rules.
-
-The local route of the VPC is automatically added to the Client VPN endpoint route table.
-
-The VPC's default security group is automatically applied for the subnet association.
- 
 
 ## **Step 4: Authorize clients to access a network** <a name="step-4-authorize-clients-to-access-network"></a>
 
-To authorize clients to access the VPC in which the associated subnet is located, you must create an authorization rule. The authorization rule specifies which clients have access to the VPC. In this tutorial, you grant access to all users.
+To authorize clients to access the VPC in which the associated subnet is located, <ins>you must create an authorization rule</ins>. The authorization rule specifies which clients have access to the VPC. In this tutorial, you grant access to all users.
 
  
 
