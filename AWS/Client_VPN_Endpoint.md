@@ -9,7 +9,7 @@ Setup AWS Client VPN & Access Private AWS Resources Across VPCs <- Video walk th
 
 **Steps**:
 * [Prerequisites](#Prerequisites)
-* [Step 1: Generate server and client certificates and keys](#Step-1:-Generate-server-and-client-certificates-and-keys)
+* [Step 1: Generate server and client certificates and keys](#step-1:-generate-server-and-client-certificates-and-keys)
 Step 2: Create a Client VPN endpoint
 Step 3: Enable VPN connectivity for clients
 Step 4: Authorize clients to access a network
@@ -26,7 +26,7 @@ To complete this getting started tutorial, you need the following:
 - A VPC with at least one subnet and an internet gateway. The route table that's associated with your subnet must have a route to the internet gateway.
  
 
-## **Step 1: Generate server and client certificates and keys** <a name="Step 1: Generate server and client certificates and keys"></a>
+## **Step 1: Generate server and client certificates and keys** <a name="step-1:-generate-server-and-client-certificates-and-keys"></a>
 
 —— Uses EasyRSA to create certificates ——
 
