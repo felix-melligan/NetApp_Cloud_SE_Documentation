@@ -30,7 +30,7 @@ To complete this getting started tutorial, you need the following:
 - This tutorial uses mutual authentication. With mutual authentication, Client VPN uses certificates to perform authentication between the client and the server.
 - For detailed steps to generate the server and client certificates and keys, see Mutual authentication.
 
-## **Step 2: Create a Client VPN endpoint** <a name="step-2-create-a-client-vpn-endpoint></a>
+## **Step 2: Create a Client VPN endpoint** <a name="step-2-create-a-client-vpn-endpoint"></a>
 
 When you create a Client VPN endpoint, you create the VPN construct to which clients can connect in order to establish a VPN connection.
 
