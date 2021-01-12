@@ -10,75 +10,59 @@ Setup AWS Client VPN & Access Private AWS Resources Across VPCs <- Video walk th
 **Steps**:
 * [Prerequisites](#Prerequisites)
 * [Step 1: Generate server and client certificates and keys](#step-1-generate-server-and-client-certificates-and-keys)
-Step 2: Create a Client VPN endpoint
+* [Step 2: Create a Client VPN endpoint](#step-2-create-a-client-vpn-endpoint)
 Step 3: Enable VPN connectivity for clients
 Step 4: Authorize clients to access a network
 Step 5: (Optional) Enable access to additional networks
 Step 6: Download the Client VPN endpoint configuration file
 Step 7: Connect to the Client VPN endpoint
 
- 
-
 ## **Prerequisites** <a name="Prerequisites"></a>
 To complete this getting started tutorial, you need the following:
 
 - The permissions required to work with Client VPN endpoints.
 - A VPC with at least one subnet and an internet gateway. The route table that's associated with your subnet must have a route to the internet gateway.
- 
 
 ## **Step 1: Generate server and client certificates and keys** <a name="step-1-generate-server-and-client-certificates-and-keys"></a>
 
 —— Uses EasyRSA to create certificates ——
 
-This tutorial uses mutual authentication. With mutual authentication, Client VPN uses certificates to perform authentication between the client and the server.
+- This tutorial uses mutual authentication. With mutual authentication, Client VPN uses certificates to perform authentication between the client and the server.
+- For detailed steps to generate the server and client certificates and keys, see Mutual authentication.
 
-For detailed steps to generate the server and client certificates and keys, see Mutual authentication.
-
- 
-Step 2: Create a Client VPN endpoint
+## **Step 2: Create a Client VPN endpoint** <a name="step-2-create-a-client-vpn-endpoint></a>
 
 When you create a Client VPN endpoint, you create the VPN construct to which clients can connect in order to establish a VPN connection.
 
 To create a Client VPN endpoint
 
- 
+1.) Open the Amazon VPC console at https://console.aws.amazon.com/vpc/.
+2.) In the navigation pane, choose Client VPN Endpoints and then choose Create Client VPN Endpoint.
+3.) (Optional) Provide a name and description for the Client VPN endpoint.
+4.) For Client IPv4 CIDR, specify an IP address range, in CIDR notation, from which to assign client IP addresses. For example, 10.0.0.0/22.
 
-Open the Amazon VPC console at https://console.aws.amazon.com/vpc/.
-
-In the navigation pane, choose Client VPN Endpoints and then choose Create Client VPN Endpoint.
-
-(Optional) Provide a name and description for the Client VPN endpoint.
-
-For Client IPv4 CIDR, specify an IP address range, in CIDR notation, from which to assign client IP addresses. For example, 10.0.0.0/22.
-Note
+**Note**
 The IP address range cannot overlap with the target network or any of the routes that will be associated with the Client VPN endpoint. The client CIDR range must have a block size that is between /12 and /22 and not overlap with VPC CIDR or any other route in the route table. You cannot change the client CIDR after you create the Client VPN endpoint.
 
-For Server certificate ARN, specify the ARN for the TLS certificate to be used by the server. Clients use the server certificate to authenticate the Client VPN endpoint to which they are connecting.
-Note
+5.) For Server certificate ARN, specify the ARN for the TLS certificate to be used by the server. Clients use the server certificate to authenticate the Client VPN endpoint to which they are connecting.
+
+**Note**
 The server certificate must be provisioned in AWS Certificate Manager (ACM).
 
-Specify the authentication method to be used to authenticate clients when they establish a VPN connection. For this tutorial, choose Use mutual authentication, and then for Client certificate ARN, specify the ARN of the client certificate that you generated in Step 1.
-
-For Do you want to log the details on client connections?, choose No.
-
-Leave the rest of the default settings, and choose Create Client VPN Endpoint.
- 
+6.) Specify the authentication method to be used to authenticate clients when they establish a VPN connection. For this tutorial, choose Use mutual authentication, and then for Client certificate ARN, specify the ARN of the client certificate that you generated in Step 1.
+7.) For Do you want to log the details on client connections?, choose No.
+8.) Leave the rest of the default settings, and choose Create Client VPN Endpoint.
 
 For more information about the other options that you can specify when creating a Client VPN endpoint, see Create a Client VPN endpoint.
 
+**Note**
 After you create the Client VPN endpoint, its state is pending-associate. Clients can only establish a VPN connection after you associate at least one target network.
-
- 
 
 Step 3: Enable VPN connectivity for clients
 
 To enable clients to establish a VPN session, you must associate a target network with the Client VPN endpoint. A target network is a subnet in a VPC.
 
- 
-
 To associate a subnet with the Client VPN endpoint
-
- 
 
 Open the Amazon VPC console at https://console.aws.amazon.com/vpc/.
 
