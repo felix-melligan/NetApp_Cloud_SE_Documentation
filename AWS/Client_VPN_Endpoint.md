@@ -41,12 +41,12 @@ To create a Client VPN endpoint
 **3.)** (Optional) Provide a name and description for the Client VPN endpoint.<br>
 **4.)** For Client IPv4 CIDR, specify an IP address range, in CIDR notation, from which to assign client IP addresses. For example, 10.0.0.0/22.<br>
 
-**Note**
+**Note - **
 The IP address range cannot overlap with the target network or any of the routes that will be associated with the Client VPN endpoint. The client CIDR range must have a block size that is between /12 and /22 and not overlap with VPC CIDR or any other route in the route table. You cannot change the client CIDR after you create the Client VPN endpoint.
 
 **5.)** For Server certificate ARN, specify the ARN for the TLS certificate to be used by the server. Clients use the server certificate to authenticate the Client VPN endpoint to which they are connecting.<br>
 
-**Note**
+**Note - **
 The server certificate must be provisioned in AWS Certificate Manager (ACM).
 
 **6.)** Specify the authentication method to be used to authenticate clients when they establish a VPN connection. For this tutorial, choose Use mutual authentication, and then for Client certificate ARN, specify the ARN of the client certificate that you generated in Step 1.<br>
@@ -55,7 +55,7 @@ The server certificate must be provisioned in AWS Certificate Manager (ACM).
 
 For more information about the other options that you can specify when creating a Client VPN endpoint, see Create a Client VPN endpoint.
 
-**Note**
+**Note - **
 After you create the Client VPN endpoint, its state is pending-associate. Clients can only establish a VPN connection after you associate at least one target network.
 
 ## **Step 3: Enable VPN connectivity for clients** <a name="step-3-enable-vpn-connectivity-for-clients"></a>
@@ -71,7 +71,7 @@ To enable clients to establish a VPN session, you must associate a target networ
 **5.)** For **Subnet to associate**, choose the subnet to associate with the Client VPN endpoint.<br>
 **6.)** Choose **Associate**.<br>
 
-**Note**
+**Note - **
 If authorization rules allow it, one subnet association is enough for clients to access a VPC's entire network. You can associate additional subnets to provide high availability in case one of the Availability Zones goes down.
  
 
