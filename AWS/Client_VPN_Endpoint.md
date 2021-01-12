@@ -11,11 +11,11 @@ Setup AWS Client VPN & Access Private AWS Resources Across VPCs <- Video walk th
 * [Prerequisites](#Prerequisites)
 * [Step 1: Generate server and client certificates and keys](#step-1-generate-server-and-client-certificates-and-keys)
 * [Step 2: Create a Client VPN endpoint](#step-2-create-a-client-vpn-endpoint)
-Step 3: Enable VPN connectivity for clients
-Step 4: Authorize clients to access a network
-Step 5: (Optional) Enable access to additional networks
-Step 6: Download the Client VPN endpoint configuration file
-Step 7: Connect to the Client VPN endpoint
+* [Step 3: Enable VPN connectivity for clients](#step-3-enable-vpn-connectivity-for-clients)
+* [Step 4: Authorize clients to access a network](#step-4-authorize-clients-to-access-network)
+* [Step 5: (Optional) Enable access to additional networks](#step-5-optional-enable-access-to-additional-networks)
+* [Step 6: Download the Client VPN endpoint configuration file](#step-6-download-the-client-vpn-endpoint-configuration-file)
+* [Step 7: Connect to the Client VPN endpoint](#step-7-connect-to-the-client-vpn-endpoint)
 
 ## **Prerequisites** <a name="Prerequisites"></a>
 To complete this getting started tutorial, you need the following:
@@ -58,7 +58,7 @@ For more information about the other options that you can specify when creating 
 **Note**
 After you create the Client VPN endpoint, its state is pending-associate. Clients can only establish a VPN connection after you associate at least one target network.
 
-Step 3: Enable VPN connectivity for clients
+## **Step 3: Enable VPN connectivity for clients** <a name="step-3-enable-vpn-connectivity-for-clients"></a>
 
 To enable clients to establish a VPN session, you must associate a target network with the Client VPN endpoint. A target network is a subnet in a VPC.
 
@@ -90,7 +90,7 @@ The local route of the VPC is automatically added to the Client VPN endpoint rou
 The VPC's default security group is automatically applied for the subnet association.
  
 
-Step 4: Authorize clients to access a network
+## **Step 4: Authorize clients to access a network** <a name="step-4-authorize-clients-to-access-network"></a>
 
 To authorize clients to access the VPC in which the associated subnet is located, you must create an authorization rule. The authorization rule specifies which clients have access to the VPC. In this tutorial, you grant access to all users.
 
@@ -116,7 +116,7 @@ Choose Add authorization rule.
 Ensure that the security groups for the resources in your VPC have a rule that allows access from the security group for the subnet association. This enables your clients to access the resources in your VPC. For more information, see Security groups.
  
 
-Step 5: (Optional) Enable access to additional networks
+## **Step 5: (Optional) Enable access to additional networks** <a name="step-5-optional-enable-access-to-additional-networks"></a>
 
 You can enable access to additional networks connected to the VPC, such as AWS services, peered VPCs, and on-premises networks. For each additional network, you must add a route to the network and configure an authorization rule to give clients access.
 
@@ -147,7 +147,7 @@ Choose Add authorization rule.
 Ensure that the security group that's associated with subnet you are routing traffic through allows inbound and outbound traffic to and from the internet. To do this, add inbound and outbound rules that allow internet traffic to and from 0.0.0.0/0.
  
 
-Step 6: Download the Client VPN endpoint configuration file
+## **Step 6: Download the Client VPN endpoint configuration file** <a name="step-6-download-the-client-vpn-endpoint-configuration-file"></a>
 
 The final step is to download and prepare the Client VPN endpoint configuration file. The configuration file includes the Client VPN endpoint and certificate information required to establish a VPN connection. You must provide this file to the clients who need to connect to the Client VPN endpoint to establish a VPN connection. The client uploads this file into their VPN client application.
 
@@ -213,7 +213,7 @@ For more information about the Client VPN endpoint configuration file, see Expor
 
  
 
-Step 7: Connect to the Client VPN endpoint
+## **Step 7: Connect to the Client VPN endpoint** <a name="step-7-connect-to-the-client-vpn-endpoint"></a>
 
 You can connect to the Client VPN endpoint using the AWS-provided client or another OpenVPN-based client application. For more information, see the AWS Client VPN User Guide.
 
