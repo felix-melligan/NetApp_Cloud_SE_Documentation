@@ -14,8 +14,8 @@ VPC -> Router -> Virtual Private Gateway -> VPN Connection -> Customer Gateway (
 - must create the certificate to use
 - device can be anything
 
-BGP - Border Gateway Protocol
-ASN - Autonomous System Number
+BGP - Border Gateway Protocol 
+ASN - Autonomous System Number 
 
 **NOTE -** Customer Gateway must have a public IP
 
