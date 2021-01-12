@@ -16,6 +16,7 @@ Setup AWS Client VPN & Access Private AWS Resources Across VPCs <- Video walk th
 * [Step 5: (Optional) Enable access to additional networks](#step-5-optional-enable-access-to-additional-networks)
 * [Step 6: Download the Client VPN endpoint configuration file](#step-6-download-the-client-vpn-endpoint-configuration-file)
 * [Step 7: Connect to the Client VPN endpoint](#step-7-connect-to-the-client-vpn-endpoint)
+* [TROUBLESHOOTING](#troubleshooting)
 
 ## **Prerequisites** <a name="Prerequisites"></a>
 To complete this getting started tutorial, you need the following:
@@ -176,7 +177,7 @@ VPN endpoint will have a route table attached as well to allow access to specifi
 **NOTE -** DOES SUPPORT SPLIT Tunneling - ONLY AWS TRAFFIC ROUTES THROUGH THE VPN and all other user traffic can be routed as standard (like if you are viewing cnn.com or something that’s not secure).
 
 
-**TROUBLESHOOTING**:
+## **TROUBLESHOOTING:** <a name="troubleshooting"></a>
 - Make sure the VPC has an Internet Gateway configured (IGW) AND attached to the VPC
 - Make sure the VPC has a Virtual Private Gateway (VGW) AND attached to the VPC
 - Make sure to ADD the association and AUTHORIZE INGRESS items
