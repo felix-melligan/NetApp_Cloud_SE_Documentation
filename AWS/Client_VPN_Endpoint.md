@@ -36,22 +36,22 @@ When you create a Client VPN endpoint, you create the VPN construct to which cli
 
 To create a Client VPN endpoint
 
-1.) Open the Amazon VPC console at https://console.aws.amazon.com/vpc/.<br>
-2.) In the navigation pane, choose Client VPN Endpoints and then choose Create Client VPN Endpoint.<br>
-3.) (Optional) Provide a name and description for the Client VPN endpoint.<br>
-4.) For Client IPv4 CIDR, specify an IP address range, in CIDR notation, from which to assign client IP addresses. For example, 10.0.0.0/22.<br>
+**1.)** Open the Amazon VPC console at https://console.aws.amazon.com/vpc/.<br>
+**2.)** In the navigation pane, choose Client VPN Endpoints and then choose Create Client VPN Endpoint.<br>
+**3.)** (Optional) Provide a name and description for the Client VPN endpoint.<br>
+**4.)** For Client IPv4 CIDR, specify an IP address range, in CIDR notation, from which to assign client IP addresses. For example, 10.0.0.0/22.<br>
 
 **Note**
 The IP address range cannot overlap with the target network or any of the routes that will be associated with the Client VPN endpoint. The client CIDR range must have a block size that is between /12 and /22 and not overlap with VPC CIDR or any other route in the route table. You cannot change the client CIDR after you create the Client VPN endpoint.
 
-5.) For Server certificate ARN, specify the ARN for the TLS certificate to be used by the server. Clients use the server certificate to authenticate the Client VPN endpoint to which they are connecting.<br>
+**5.)** For Server certificate ARN, specify the ARN for the TLS certificate to be used by the server. Clients use the server certificate to authenticate the Client VPN endpoint to which they are connecting.<br>
 
 **Note**
 The server certificate must be provisioned in AWS Certificate Manager (ACM).
 
-6.) Specify the authentication method to be used to authenticate clients when they establish a VPN connection. For this tutorial, choose Use mutual authentication, and then for Client certificate ARN, specify the ARN of the client certificate that you generated in Step 1.<br>
-7.) For Do you want to log the details on client connections?, choose No.<br>
-8.) Leave the rest of the default settings, and choose Create Client VPN Endpoint.<br>
+**6.)** Specify the authentication method to be used to authenticate clients when they establish a VPN connection. For this tutorial, choose Use mutual authentication, and then for Client certificate ARN, specify the ARN of the client certificate that you generated in Step 1.<br>
+**7.)** For Do you want to log the details on client connections?, choose No.<br>
+**8.)** Leave the rest of the default settings, and choose Create Client VPN Endpoint.<br>
 
 For more information about the other options that you can specify when creating a Client VPN endpoint, see Create a Client VPN endpoint.
 
@@ -62,20 +62,16 @@ After you create the Client VPN endpoint, its state is pending-associate. Client
 
 To enable clients to establish a VPN session, you must associate a target network with the Client VPN endpoint. A target network is a subnet in a VPC.
 
-To associate a subnet with the Client VPN endpoint
+**To associate a subnet with the Client VPN endpoint**
 
-Open the Amazon VPC console at https://console.aws.amazon.com/vpc/.
+**1.)** Open the Amazon VPC console at https://console.aws.amazon.com/vpc/.<br>
+**2.)** In the navigation pane, choose **Client VPN Endpoints**.<br>
+**3.)** Select the Client VPN endpoint with which to associate the subnet and choose **Associations** then **Associate**.<br>
+**4.)** For **VPC**, choose the VPC in which the subnet is located. If you specified a VPC when you created the Client VPN endpoint, it must be the same VPC.<br>
+**5.)** For **Subnet to associate**, choose the subnet to associate with the Client VPN endpoint.<br>
+**6.)** Choose **Associate**.<br>
 
-In the navigation pane, choose Client VPN Endpoints.
-
-Select the Client VPN endpoint with which to associate the subnet and choose Associations, Associate.
-
-For VPC, choose the VPC in which the subnet is located. If you specified a VPC when you created the Client VPN endpoint, it must be the same VPC.
-
-For Subnet to associate, choose the subnet to associate with the Client VPN endpoint.
-
-Choose Associate.
-Note
+**Note**
 If authorization rules allow it, one subnet association is enough for clients to access a VPC's entire network. You can associate additional subnets to provide high availability in case one of the Availability Zones goes down.
  
 
