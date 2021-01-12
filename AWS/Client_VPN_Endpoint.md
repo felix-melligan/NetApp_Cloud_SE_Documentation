@@ -8,7 +8,7 @@ https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/cvpn-getting-started.html
 Setup AWS Client VPN & Access Private AWS Resources Across VPCs <- Video walk through of the above link
 
 **Steps**:
-Prerequisites
+* [Prerequisites](#Prerequisites)
 Step 1: Generate server and client certificates and keys
 Step 2: Create a Client VPN endpoint
 Step 3: Enable VPN connectivity for clients
@@ -19,7 +19,7 @@ Step 7: Connect to the Client VPN endpoint
 
  
 
-**Prerequisites**
+## **Prerequisites** <a name="Prerequisites"></a>
 To complete this getting started tutorial, you need the following:
 
 - The permissions required to work with Client VPN endpoints.
