@@ -36,8 +36,8 @@ When you create a Client VPN endpoint, you create the VPN construct to which cli
 
 To create a Client VPN endpoint
 
-1.) Open the Amazon VPC console at https://console.aws.amazon.com/vpc/.
-2.) In the navigation pane, choose Client VPN Endpoints and then choose Create Client VPN Endpoint.
+1.) Open the Amazon VPC console at https://console.aws.amazon.com/vpc/.<br>
+2.) In the navigation pane, choose Client VPN Endpoints and then choose Create Client VPN Endpoint.<br>
 3.) (Optional) Provide a name and description for the Client VPN endpoint.
 4.) For Client IPv4 CIDR, specify an IP address range, in CIDR notation, from which to assign client IP addresses. For example, 10.0.0.0/22.
 
