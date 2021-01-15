@@ -50,7 +50,7 @@ Transit Gateway:
 VPN Connectivity:
 
 - If migrating data from On-premises ONTAP or accessing the VPC from outside of the environment a VPN (Client VPN Endpoint for single users or Site-to-Site VPN for connecting an entire on-premises subnet or range) or Direct Connect connection may be required.
-- See [“AWS Client VPN Endpoint”](/AWS/Client_VPN_Endpoint.md#client-vpn-endpoint) for creation steps and considerations.
+- See [“AWS Client VPN Endpoint”](/AWS/Client_VPN_Endpoint.md#client-vpn-endpoint) or ["Site-to-Site VPN"](/AWS/Site-to-Site_VPN.md#site-to-site-vpn) for creation steps and considerations.
 
 **4.) Add Connector: (learn about Connectors: https://docs.netapp.com/us-en/occm/concept_connectors.html)**
 
