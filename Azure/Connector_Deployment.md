@@ -14,14 +14,39 @@
 		+ Virtual machine type
 			+ [General purpose virtual machine sizes](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/sizes-general#dsv2-series)
 			+ [Memory optimized virtual machine sizes](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/sizes-memory#dsv2-series-11-15)
+* [Launching Cloud Volumes ONTAP in Azure](#Launching-Cloud-Volumes-ONTAP-in-Azure)
 			
 ## Creating a Connector in Azure from Cloud Manager <a name="creating-a-connector-in-azure-from-cloud-manager"></a>
 
+### Networking requirements for the Connector in Azure
 
+- Networking Requirements for the Connector
+	+ Networking Requirements for the Connector 
+		+ Configuring the Connector to use a proxy server
+		+ Connections to target networks
+		+ Outbound internet access
+		
+- Security group rules for the Connector
+	+ Inbound rules
+	+ Outbound rules
+		+ Basic outbound rules
+		+ Advanced outbound rules
 
 ## Creating a Connector from the Azure Marketplace <a name="Creating-a-Connector-from-the-Azure-Marketplace"></a>
 
+### Networking requirements for the Connector in Azure
 
+- Networking Requirements for the Connector
+	+ Networking Requirements for the Connector 
+		+ Configuring the Connector to use a proxy server
+		+ Connections to target networks
+		+ Outbound internet access
+		
+- Security group rules for the Connector
+	+ Inbound rules
+	+ Outbound rules
+		+ Basic outbound rules
+		+ Advanced outbound rules
 
 ## Installing the Connector software on an existing Linux host <a name="Installing-the-Connector-software-on-an-existing-Linux-host"></a>
 
@@ -29,39 +54,36 @@
 
 ## Planning your Cloud Volumes ONTAP configuration in Azure <a name="Planning-your-Cloud-Volumes-ONTAP-configuration-in-Azure"></a>
 
-	o Azure disk type
-		§ What disk types are available in Azure? 
-	o Azure disk size 
-		§ Managed Disks
-		§ Page Blobs pricing
-	o Choosing a configuration that supports Flash Cache
-		§ Learn more about Flash Cache
-	o Choosing a write speed
-		§ Learn more about write speed
-- Networking requirements for Cloud Volumes ONTAP in Azure
-	o Networking requirements for Cloud Volumes ONTAP in Azure 
-		§ Outbound internet access for Cloud Volumes ONTAP
-		§ Security groups
-		§ Number of IP addresses
-		§ Connection from Cloud Volumes ONTAP to Azure Blob storage for data tiering
-		§ Connections to ONTAP systems in other networks
-- Networking Requirements for the Connector
-	o Networking Requirements for the Connector 
-		§ Configuring the Connector to use a proxy server
-		§ Connections to target networks
-		§ Outbound internet access
+- Azure disk type
+	+ What disk types are available in Azure? 
+- Azure disk size 
+	+ Managed Disks
+	+ Page Blobs pricing
+- Choosing a configuration that supports Flash Cache
+	+ Learn more about Flash Cache
+- Choosing a write speed
+	+ Learn more about write speed
+
+### Networking requirements for Cloud Volumes ONTAP in Azure
+
+- Networking requirements for Cloud Volumes ONTAP in Azure 
+	+ Outbound internet access for Cloud Volumes ONTAP
+	+ Security groups
+	+ Number of IP addresses
+	+ Connection from Cloud Volumes ONTAP to Azure Blob storage for data tiering
+	+ Connections to ONTAP systems in other networks
+
 - Security group rules for Cloud Volumes ONTAP
-	o  Inbound rules for single node systems
-	o Inbound rules for HA systems
-	o Outbound rules
-		§ Basic outbound rules
-		§ Advanced outbound rules
-- Security group rules for the Connector
-	o Inbound rules
-	o Outbound rules
-		§ Basic outbound rules
-		§ Advanced outbound rules
+	+ Inbound rules for single node systems
+	+ Inbound rules for HA systems
+	+ Outbound rules
+		+ Basic outbound rules
+		+ Advanced outbound rules
  
+ Launching-Cloud-Volumes-ONTAP-in-Azure
+ 
+ ## Launching Cloud Volumes ONTAP in Azure <a name="Launching-Cloud-Volumes-ONTAP-in-Azure"></a>
+
 - Launching Cloud Volumes ONTAP in Azure
 	o Before you begin
 		§ You should have a Connector that is associated with your workspace.
