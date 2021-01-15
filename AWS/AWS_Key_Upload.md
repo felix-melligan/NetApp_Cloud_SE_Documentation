@@ -2,11 +2,11 @@
 
 Upload the server certificate and key and the client certificate and key to ACM. The following commands use the AWS CLI.  See [AWS CLI Installation](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html) for how to install and configure.
 
-'''
+```
 $ aws acm import-certificate --certificate fileb://server.crt --private-key fileb://server.key --certificate-chain fileb://ca.crt --region region
 
 $ aws acm import-certificate --certificate fileb://client1.domain.tld.crt --private-key fileb://client1.domain.tld.key --certificate-chain fileb://ca.crt --region region
-'''
+```
 
 To upload the certificates using the ACM console, see [Import a Certificate](https://docs.aws.amazon.com/acm/latest/userguide/import-certificate-api-cli.html) in the AWS Certificate Manager User Guide.
 
