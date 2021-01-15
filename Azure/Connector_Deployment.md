@@ -25,6 +25,10 @@
 
 ## Installing the Connector software on an existing Linux host <a name="Installing-the-Connector-software-on-an-existing-Linux-host"></a>
 
+
+
+## Planning your Cloud Volumes ONTAP configuration in Azure <a name="Planning-your-Cloud-Volumes-ONTAP-configuration-in-Azure"></a>
+
 	o Azure disk type
 		§ What disk types are available in Azure? 
 	o Azure disk size 
