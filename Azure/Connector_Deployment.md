@@ -4,13 +4,13 @@
 * [Creating a Connector from the Azure Marketplace](#Creating a Connector from the Azure Marketplace)
 * [Installing the Connector software on an existing Linux host](#Installing the Connector software on an existing Linux host)
 * [Planning your Cloud Volumes ONTAP configuration in Azure](#Planning your Cloud Volumes ONTAP configuration in Azure)
-	o Choosing a license type 
-		§ Supported configurations for Cloud Volumes ONTAP 9.8 in Azure 
-	o Supported VM types 
-		§ Supported configurations for Cloud Volumes ONTAP 9.8 in Azure 
-	o Understanding storage limits 
-		§ Storage limits for Cloud Volumes ONTAP 9.8 in Azure 
-	o Sizing your system in Azure
+	+ [Choosing a license type](#Choosing a license type)
+		+ [Supported configurations for Cloud Volumes ONTAP 9.8 in Azure](https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_configs_azure_98.html)
+	+ [Supported VM types](#Supported VM types) 
+		+ [Supported configurations for Cloud Volumes ONTAP 9.8 in Azure](https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_configs_azure_98.html)
+	+ [Understanding storage limits](#Understanding storage limits) 
+		+ [Storage limits for Cloud Volumes ONTAP 9.8 in Azure](https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_limits_azure_98.html)
+	+ [Sizing your system in Azure] 
 		§ Virtual machine type
 			· General purpose virtual machine sizes 
 			· Memory optimized virtual machine sizes 
