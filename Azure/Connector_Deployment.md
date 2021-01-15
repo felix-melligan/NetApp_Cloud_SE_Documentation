@@ -17,7 +17,14 @@
 			
 ## Creating a Connector in Azure from Cloud Manager <a name="creating-a-connector-in-azure-from-cloud-manager"></a>
 
-			
+
+
+## Creating a Connector from the Azure Marketplace <a name="Creating-a-Connector-from-the-Azure-Marketplace"></a>
+
+
+
+## Installing the Connector software on an existing Linux host <a name="Installing-the-Connector-software-on-an-existing-Linux-host"></a>
+
 	o Azure disk type
 		§ What disk types are available in Azure? 
 	o Azure disk size 
