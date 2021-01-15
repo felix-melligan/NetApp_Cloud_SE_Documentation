@@ -1,16 +1,16 @@
 # CVO Azure Deployment Playbook Guide
 
 * [Creating a Connector in Azure from Cloud Manager](#creating-a-connector-in-azure-from-cloud-manager)
-* [Creating a Connector from the Azure Marketplace](#Creating a Connector from the Azure Marketplace)
-* [Installing the Connector software on an existing Linux host](#Installing the Connector software on an existing Linux host)
-* [Planning your Cloud Volumes ONTAP configuration in Azure](#Planning your Cloud Volumes ONTAP configuration in Azure)
-	+ [Choosing a license type](#Choosing a license type)
+* [Creating a Connector from the Azure Marketplace](#Creating-a-Connector-from-the-Azure-Marketplace)
+* [Installing the Connector software on an existing Linux host](#Installing-the-Connector-software-on-an-existing-Linux-host)
+* [Planning your Cloud Volumes ONTAP configuration in Azure](#Planning-your-Cloud-Volumes-ONTAP-configuration-in-Azure)
+	+ [Choosing a license type](#Choosing-a-license-type)
 		+ [Supported configurations for Cloud Volumes ONTAP 9.8 in Azure](https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_configs_azure_98.html)
-	+ [Supported VM types](#Supported VM types) 
+	+ [Supported VM types](#Supported-VM-types) 
 		+ [Supported configurations for Cloud Volumes ONTAP 9.8 in Azure](https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_configs_azure_98.html)
-	+ [Understanding storage limits](#Understanding storage limits) 
+	+ [Understanding storage limits](#Understanding-storage-limits) 
 		+ [Storage limits for Cloud Volumes ONTAP 9.8 in Azure](https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_limits_azure_98.html)
-	+ [Sizing your system in Azure](#Sizing your system in Azure)
+	+ [Sizing your system in Azure](#Sizing-your-system-in-Azure)
 		+ Virtual machine type
 			+ [General purpose virtual machine sizes](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/sizes-general#dsv2-series)
 			+ [Memory optimized virtual machine sizes](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/sizes-memory#dsv2-series-11-15)
