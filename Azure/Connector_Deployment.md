@@ -100,7 +100,7 @@
 			
 #### Steps
 
-	+ On the Canvas page, click Add Working Environment and follow the prompts.
+- On the Canvas page, click Add Working Environment and follow the prompts.
 	+ Choose a Location: Select Microsoft Azure and Cloud Volumes ONTAP Single Node or Cloud Volumes ONTAP High Availability.
 	+ Details and Credentials: Optionally change the Azure credentials and subscription, specify a cluster name and resource group name, add tags if needed, and then specify credentials.
 	+ Services: Keep the services enabled or disable the individual services that you do not want to use with Cloud Volumes ONTAP.
@@ -116,7 +116,7 @@
 	
 #### Note the following:
 
-	+ The disk type is for the initial volume. You can choose a different disk type for subsequent volumes.
+- The disk type is for the initial volume. You can choose a different disk type for subsequent volumes.
 	+ The disk size is for all disks in the initial aggregate and for any additional aggregates that Cloud Manager creates when you use the simple provisioning option. You can create aggregates that use a different disk size by using the advanced allocation option.
 	+ For help choosing a disk type and size, see Sizing your system in Azure.
 	+ You can choose a specific volume tiering policy when you create or edit a volume.
@@ -146,11 +146,12 @@
 		
 #### Result
 		
-	+ Cloud Manager deploys the Cloud Volumes ONTAP system. You can track the progress in the timeline.
+- Cloud Manager deploys the Cloud Volumes ONTAP system. You can track the progress in the timeline.
 	+ If you experience any issues deploying the Cloud Volumes ONTAP system, review the failure message. You can also select the working environment and click Re-create environment.
 	+ For additional help, go to NetApp Cloud Volumes ONTAP Support.
+	
 #### After you finish
 
-	+ If you provisioned a CIFS share, give users or groups permissions to the files and folders and verify that those users can access the share and create a file.
+- If you provisioned a CIFS share, give users or groups permissions to the files and folders and verify that those users can access the share and create a file.
 	+ If you want to apply quotas to volumes, use System Manager or the CLI.
 	+ Quotas enable you to restrict or track the disk space and number of files used by a user, group, or qtree.
