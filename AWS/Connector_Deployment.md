@@ -42,6 +42,16 @@ Networking / Firewall Rules
 - SG for CVO in AWS: https://docs.netapp.com/us-en/occm/reference_security_groups.html#inbound-rules
 - SG for Connector in all hyperscalers: https://docs.netapp.com/us-en/occm/reference_networking_cloud_manager.html#connection-to-target-networks
 
+Transit Gateway:
+
+- If deploying CVO as an HA pair across Availability Zones, a Transit Gateway is needed to allow access to the floating IPs (b/c the floating IP’s are outside of your VPCs entire CIDR block)
+- See “Transit Gateway” Notes note for creation steps and considerations.
+
+VPN Connectivity:
+
+- If migrating data from On-premises ONTAP or accessing the VPC from outside of the environment a VPN (Client VPN Endpoint for single users or Site-to-Site VPN for connecting an entire on-premises subnet or range) or Direct Connect connection may be required.
+- See [“AWS Client VPN Endpoint”]9/AWS/AWS_Client_VPN_Endpoint.md#aws-client-vpn-endpoint) for creation steps and considerations.
+
 **4.) Add Connector: (learn about Connectors: https://docs.netapp.com/us-en/occm/concept_connectors.html)**
 
 NOTE: Disable “Automatic Cloud Volumes ONTAP update during deployment” - this will significantly increase the deployment time (double or more)
