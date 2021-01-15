@@ -1,11 +1,9 @@
 # CVO Azure Deployment Playbook Guide
-- Creating a Connector in Azure from Cloud Manager 
-	o Creating a Connector in Azure from Cloud Manager  
-- Creating a Connector from the Azure Marketplace 
-	o Creating a Connector from the Azure Marketplace 
-- Installing the Connector software on an existing Linux host 
-	o Installing the Connector software on an existing Linux host 
-- Planning your Cloud Volumes ONTAP configuration in Azure
+
+* [Creating a Connector in Azure from Cloud Manager](#Creating a Connector in Azure from Cloud Manager)
+* [Creating a Connector from the Azure Marketplace](#Creating a Connector from the Azure Marketplace)
+* [Installing the Connector software on an existing Linux host](#Installing the Connector software on an existing Linux host)
+* [Planning your Cloud Volumes ONTAP configuration in Azure](#Planning your Cloud Volumes ONTAP configuration in Azure)
 	o Choosing a license type 
 		§ Supported configurations for Cloud Volumes ONTAP 9.8 in Azure 
 	o Supported VM types 
