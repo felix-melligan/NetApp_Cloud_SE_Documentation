@@ -19,4 +19,4 @@ These are the pre-requisites for deploying NetApp Cloud Manager with steps inclu
 - This could mean the ability to create or manage VPN tunnels or AWS Direct Connect connections.
 - You need to be able to manage and deploy a Transit Gateway if you wish to deploy Cloud Volumes ONTAP as a Highly Available (HA) pair across multiple availability zones (AZ's) AND want to access the CVO instances from outside of the VPC.
 
-**5.)** If you intend to use Tiering or Cloud Backup Service then you need to create an Endpoint for the S3 service for the VPC that will host the NetApp solutions.  This is outlined in [Connector Deployment](/AWS/Connector_Deployment.md#connector-deployment)
+**5.)** If you intend to use Tiering or Cloud Backup Service then you need to create an Endpoint for the S3 service attached to the VPC that will host the NetApp solutions.  This is outlined in [Connector Deployment](/AWS/Connector_Deployment.md#connector-deployment)
