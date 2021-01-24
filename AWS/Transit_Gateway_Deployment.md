@@ -4,4 +4,4 @@ When deploying NetApp Cloud Volumes ONTAP as a Highly Available (HA) pair across
 
 **To Deploy an AWS Transit Gateway**:
 
-1.) 
+1.)
