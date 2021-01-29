@@ -24,6 +24,8 @@ IAM policy/roles:
 - Create policy and Role for CVO instances as well
 - Policies for BOTH Cloud Manager Connectors and CVO are found here: https://mysupport.netapp.com/site/info/cloud-manager-policies
 
+**NOTE**: If your organization has SCP (Service Control Policies) that block any of the functionality listed in the JSON file then authentication via cloudmanager.netapp.com will fail.
+
 S3 Endpoint for Tiering:
 
 - If using Tiering MAKE sure you add the S3 endpoint: AWS -> VPC -> Endpoints -> Create Endpoint -> search for ’s3’ -> Choose the VPC for it -> add subnet associations -> Select a Security Group -> Create Endpoint
