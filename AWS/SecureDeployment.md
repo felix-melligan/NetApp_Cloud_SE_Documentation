@@ -36,7 +36,7 @@
 
 **16.)** chmod 777 /rep/OnCommandCloudManager-V3.8.9.sh
 
-**)** /rep/OnCommandCloudManager-V3.8.9.sh (use default settings)
+**17.)** /rep/OnCommandCloudManager-V3.8.9.sh (use default settings)
 
 #after seeing "***** Waiting For Web Server to be up *****"
 
