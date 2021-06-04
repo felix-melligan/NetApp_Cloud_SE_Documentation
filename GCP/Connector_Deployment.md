@@ -163,12 +163,13 @@ If you have any of the following requirements, you will need to deploy CVO via t
 ---
 
 ## IAM enablement <a name="iam-enablement"></a>
+Instructions on how to create the IAM roles and service accounts to assign to the service connector and Cloud Volumes ONTAP nodes
 - Get policy from: https://mysupport.netapp.com/site/info/cloud-manager-policies:
   - User policy: ```curl https://occm-sample-policies.s3.amazonaws.com/Setup_As_Service_3.7.3_GCP.yaml -o NetAppUserPolicy.yaml ```
   - SC policy: ```curl https://occm-sample-policies.s3.amazonaws.com/Policy_for_Cloud_Manager_3.9.0_GCP.yaml -o NetAppSCPolicy.yaml ```
 
 ### Exports <a name="exports"></a>
-Enables you to run gcloud commands without constantly editing them before running them
+Enables you to run gcloud commands without constantly editing them before run time
 - Export variables:  
   - Service Project/Current Project: ```project=`gcloud config list --format 'value(core.project)' 2>/dev/null` ```
   - Host Project (Optional): ```hostProject=[ENTER YOUR HOST PROJECT HERE] ```
@@ -179,12 +180,13 @@ Enables you to run gcloud commands without constantly editing them before runnin
   - IAM ONTAP node service account name: ```cvoServiceAccount=netapp-cloud-volumes-ontap ```
 
 ### User Level <a name="user-level"></a>
+(Optional) enables the user to deploy the service connector from NetApp Cloud Central - unnecessary if deploying through gcloud
 - Download User policy from Support site and upload to gcloud (If you didn't use curl)
 - Create role: ```gcloud iam roles create $userRole --project=$project --file NetAppUserPolicy.yaml ```
 - Assign role to user: ```gcloud projects add-iam-policy-binding $project --member=user:$user --role=projects/$project/roles/$userRole ```
 
 ### Service Connector Level <a name="service-connector-level"></a>
-- Download GCP SC policy and upload to gcloud console (If you didn't use curl)
+- Download GCP Service Connector policy and upload to gcloud console (If you didn't use curl)
 - Create Role: ```gcloud iam roles create $connectorRole --project $project --file NetAppSCPolicy.yaml ```
 - Create Service Account: ```gcloud iam service-accounts create $connectorServiceAccount --description="Allows NetApp Service Connector to deploy and manage Cloud Volumes ONTAP instances" --display-name="NetApp Service Connector" ```
 - Assign role to service connector: ```gcloud projects add-iam-policy-binding $project --member=serviceAccount:connectorServiceAccount --role=projects/$project/roles/$connectorRole ```
