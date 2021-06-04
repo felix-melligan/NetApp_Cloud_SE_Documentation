@@ -9,7 +9,7 @@
   + [High Availability, No Shared VPC](#pre-requisites-ha-nsv)
   + [High Availability, Shared VPC](#pre-requisites-ha-sv)
   + [Allow APIs](#allow-apis)
-  + [Extra Tips](#extra-tips)
+  + [Extra Tips](#extra-tips) :bulb:
 * [IAM enablement](#iam-enablement)
   + [Exports](#exports)
   + [User Level](#user-level)
